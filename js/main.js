@@ -1,5 +1,4 @@
 
-var won = false;
 var guess;         //guess
 var guesses = [];  //holds each letter guessed
 
@@ -33,5 +32,5 @@ var answer = [];
 
 var remainingLetters = word.length;
 
-var replay = function()
+// var replay = function()
 
