@@ -1,0 +1,70 @@
+html{
+  background-color: #78AAEF;
+}
+
+h1, p{
+  font-family: helvetica;
+  text-align: center;
+}
+
+#hangman{
+  margin-left: 40px;
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  width: 500px;
+  border: 10px solid black;
+}
+
+.letterBox{
+  position: relative;
+  top: -300px;
+  left: 600px;
+ }
+
+#guess{
+  position: relative;
+  margin-bottom: 425px;
+  display: inline;
+  top: -400px;
+  left: 600px;
+  border: 5px solid black;
+}
+
+#word{
+  position: relative;
+  top: -350px;
+  left: 600px;
+}
+/*child of div #word*/
+#word > div{
+  display: inline;
+}
+
+#letters{
+  float: right;
+  margin-bottom: 700px;
+  top: -200px;
+  left: 700px;
+}
+
+#start{
+  position: relative;
+  top: -250px;
+  left: 800px;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: helvetica;
+  font-size: 100%;
+}
+#replay{
+  position: relative;
+  top: -250px;
+  left: 900px;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: helvetica;
+  font-size: 100%;
+}
