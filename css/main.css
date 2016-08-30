@@ -28,7 +28,18 @@ h1, p{
   display: inline;
   top: -400px;
   left: 600px;
-  border: 10px solid black;
+  border: 5px solid black;
+}
+
+#word{
+  position: relative;
+  top: -350px;
+  left: 600px;
+}
+/*child of div #word*/
+#word > div{
+  display: inline;
+>>>>>>> master
 }
 
 #letters{
