@@ -25,12 +25,12 @@ var words = [
 //random word generator
 var word = words[Math.floor(Math.random() * words.length)];
 //display random word
-var answer = [];
-  for (var i = 0; i < word.length; i++){
-    answer[i] = "_";
-  }
+// var answer = [];
+//   for (var i = 0; i < word.length; i++){
+//     answer[i] = "_";
+//   }
 
-var remainingLetters = word.length;
+// var remainingLetters = word.length;
 
 // var replay = function()
 
