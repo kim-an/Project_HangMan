@@ -9,11 +9,15 @@ h1, p{
 
 #hangman{
   margin-left: 40px;
-  position: relative;
   overflow: hidden;
   height: 500px;
   width: 500px;
   border: 10px solid black;
+}
+
+#gallo{
+  padding-left: 200px;
+  padding-top: 20px;
 }
 
 .letterBox{
@@ -22,6 +26,11 @@ h1, p{
   left: 600px;
  }
 
+#text{
+  position: relative;
+  top: -400px;
+  left: 600px;
+}
 #guess{
   position: relative;
   margin-bottom: 425px;
@@ -39,7 +48,6 @@ h1, p{
 /*child of div #word*/
 #word > div{
   display: inline;
->>>>>>> master
 }
 
 #letters{

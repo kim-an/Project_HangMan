@@ -5,6 +5,7 @@ var numOfRightGuesses = 0;
 var numOfWrongGuesses = 0;
 var correctLetter = 0;
 var word;
+var letter;
 
 //buttons to guess letters
 // document.getElementById('letterBox').innerHTML = guess;
@@ -60,6 +61,9 @@ $("#start").on('click', function(event) {
 $('#replay').on('click', function(event) {
   // event.preventDefault();
   /* Act on the event */
+  $('button').css('visibility', 'visible');
+  $('#guess').empty();
+  $('#word').empty();
 
 });
 
@@ -73,3 +77,6 @@ var words = [
 
 //random word generator
 var word = words[Math.floor(Math.random() * words.length)];
+
+
+
