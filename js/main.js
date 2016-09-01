@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-var won = false;
-=======
 
->>>>>>> master
 var guess;         //guess
 var guesses = [];  //holds each letter guessed
 var numOfRightGuesses = 0;
@@ -57,16 +53,11 @@ $("#start").on('click', function(event) {
 
 //replay button
 $('#replay').on('click', function(event) {
-<<<<<<< HEAD
-  // event.preventDefault();
-  /* Act on the event */
   $('button').css('visibility', 'visible');
   $('#guess').empty();
   $('#word').empty();
-
 });
 
-=======
   $('div.letterBox button').css('visibility', 'visible');
   $('#guess').text("Letters guessed: ");
   $('#word').empty();
@@ -77,10 +68,8 @@ $('#replay').on('click', function(event) {
   setWord();
   checkGuess();
   win();
-});
 
 
->>>>>>> master
 //databank of words
 var words = [
             'lion', 'gorilla', 'zebra',
@@ -97,14 +86,10 @@ function setWord() {
   });
   $('#word').find('.letter').css('visibility','hidden');
 
-<<<<<<< HEAD
+
 //random word generator
 var word = words[Math.floor(Math.random() * words.length)];
-
-
-=======
 }
->>>>>>> master
 
 //reset button function
 function resetGlobals() {
