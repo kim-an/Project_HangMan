@@ -7,6 +7,10 @@ h1, p{
   text-align: center;
 }
 
+#guess p{
+  display: inline;
+}
+
 #hangman{
   margin-left: 40px;
   position: relative;
@@ -14,15 +18,78 @@ h1, p{
   height: 500px;
   width: 500px;
   border: 10px solid black;
+  background-image: url(../images/hangman_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
 }
 
-.letterBox{
+#gallow{
+  padding-left: 200px;
+  padding-top: 20px;
+}
+
+#head{
+  position: absolute;
+  left: 108px;
+  top: 70px;
+}
+
+#back{
+  position: absolute;
+  left: 183px;
+  top: 187px;
+}
+
+#armR{
+  position: absolute;
+  left: 184px;
+  top: 185px;
+}
+
+#armL{
+  position: absolute;
+  left: 164px;
+  top: 188px;
+}
+
+#legR{
+  position: absolute;
+  left: 195px;
+  top: 269px;
+}
+
+#legL{
+  position: absolute;
+  left: 172px;
+  top: 269px;
+}
+
+#eyeR{
+  position: absolute;
+  left: 156px;
+  top: 142px;
+}
+
+#eyeL{
+  position: absolute;
+  left: 120px;
+  top: 153px;
+}
+
+#mouth{
+  position: absolute;
+  left: 141px;
+  top: 176px;
+}
+
+.letterBox {
   position: relative;
   top: -300px;
   left: 600px;
  }
 
-#guess{
+#guess {
   position: relative;
   margin-bottom: 425px;
   display: inline;
@@ -37,8 +104,15 @@ h1, p{
   left: 600px;
 }
 /*child of div #word*/
-#word > div{
-  display: inline;
+
+
+.letter-holder {
+  display: inline-block;
+  border-bottom: 5px solid black;
+  margin: 5px;
+  position: relative;
+  width: 15px;
+  height: 15px;
 }
 
 #letters{
@@ -67,4 +141,8 @@ h1, p{
   border-radius: 5px;
   font-family: helvetica;
   font-size: 100%;
+}
+
+.bodyParts {
+  display: none;
 }
