@@ -7,8 +7,6 @@ var correctLetter = 0;
 var word;
 
 //buttons to guess letters
-// document.getElementById('letterBox').innerHTML = guess;
-
 function setLetter(letter) {
     numOfRightGuesses = 0;
     document.getElementById('guess').innerHTML += letter;
@@ -27,8 +25,6 @@ function setLetter(letter) {
     checkGuess();
     win();
     $('#' + letter).css('visibility', 'hidden'); //hides letters after guess
-    console.log("Number of wrong guess is: "+ numOfWrongGuesses);
-    console.log("Number of right guess is: "+ numOfRightGuesses);
 }
 
 //check guesses
@@ -50,16 +46,12 @@ function win(){
 
 // start button
 $("#start").on('click', function(event) {
-  // event.preventDefault();
-  /* Act on the event */
   //random word generator
   setWord();
 });
 
 //replay button
 $('#replay').on('click', function(event) {
-  // event.preventDefault();
-  /* Act on the event */
   $('div.letterBox button').css('visibility', 'visible');
   $('#guess').text("Letters guessed: ");
   $('#word').empty();
