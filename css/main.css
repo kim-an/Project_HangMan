@@ -36,32 +36,32 @@ h1, p {
 
 #back {
   position: absolute;
-  left: 183px;
-  top: 187px;
+  left: 99px;
+  top: 0;
 }
 
 #armR {
   position: absolute;
-  left: 184px;
-  top: 185px;
+  left: 101px;
+  top: -2px;
 }
 
 #armL {
   position: absolute;
-  left: 164px;
-  top: 188px;
+  left: 81px;
+  top: 1px;
 }
 
 #legR {
   position: absolute;
-  left: 195px;
-  top: 269px;
+  left: 112px;
+  top: 82px;
 }
 
 #legL {
   position: absolute;
-  left: 172px;
-  top: 269px;
+  left: 89px;
+  top: 82px;
 }
 
 #eyeR {
@@ -146,4 +146,26 @@ h1, p {
   font-size: 100%;
 }
 
+.do-sway {
+  animation: sway 3s infinite;
+  transform-origin: 50% 0;
+}
+@keyframes sway {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
 
+#wholeBody {
+  position: absolute;
+  top: 190px;
+  left: 77px;
+  width: 200px;
+  height: 400px;
+}

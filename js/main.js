@@ -33,6 +33,7 @@ function checkGuess(){
   if(numOfWrongGuesses === 9){
     $('div.letterBox button').css('visibility', 'hidden');
     alert('You lost! Try again!');
+    $('#wholeBody').addClass('do-sway');
     // $(#word).css('visibility', 'visible');
   }
 };
@@ -45,14 +46,23 @@ function win(){
   }
 }
 
+//keyboard access
+$('body').on('keypress', function(event){
+  var letter = event.key.toUpperCase();
+  $('#' + letter).trigger('click');
+});
+
 // start button
-$("#start").on('click', function(event) {
+$('#start').on('click', function(event) {
+  $('#wholeBody').removeClass('do-sway');
   //random word generator
+  resetGlobals();
   setWord();
 });
 
 //replay button
 $('#replay').on('click', function(event) {
+  $('#wholeBody').removeClass('do-sway');
   $('div.letterBox button').css('visibility', 'visible');
   $('#guess').text("Letters guessed: ");
   $('#word').empty();
@@ -77,8 +87,9 @@ var words = [
 function setWord() {
   word = words[Math.floor(Math.random() * words.length)];
   var wordArray = word.split('');
+  $('#word').html('');
   $(wordArray).each(function(index, el) {
-    $("#word").append('<div class="letter-holder"><div class="letter">' + el + '</div></div>');
+    $('#word').append('<div class="letter-holder"><div class="letter">' + el + '</div></div>');
   });
   $('#word').find('.letter').css('visibility','hidden');
 }
@@ -90,3 +101,17 @@ function resetGlobals() {
   correctLetter = 0;
   guesses = [];
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
