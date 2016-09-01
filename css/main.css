@@ -21,11 +21,7 @@ h1, p {
   background-repeat: no-repeat;
   background-position: center;
   background-color: white;
-}
-
-#gallow {
-  padding-left: 200px;
-  padding-top: 20px;
+  position: relative;
 }
 
 .bodyParts {
@@ -111,7 +107,6 @@ h1, p {
   top: -350px;
   left: 600px;
 }
-/*child of div #word*/
 
 .letter-holder {
   display: inline-block;

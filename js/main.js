@@ -53,11 +53,6 @@ $("#start").on('click', function(event) {
 
 //replay button
 $('#replay').on('click', function(event) {
-  $('button').css('visibility', 'visible');
-  $('#guess').empty();
-  $('#word').empty();
-});
-
   $('div.letterBox button').css('visibility', 'visible');
   $('#guess').text("Letters guessed: ");
   $('#word').empty();
@@ -68,6 +63,7 @@ $('#replay').on('click', function(event) {
   setWord();
   checkGuess();
   win();
+});
 
 
 //databank of words
@@ -85,10 +81,6 @@ function setWord() {
     $("#word").append('<div class="letter-holder"><div class="letter">' + el + '</div></div>');
   });
   $('#word').find('.letter').css('visibility','hidden');
-
-
-//random word generator
-var word = words[Math.floor(Math.random() * words.length)];
 }
 
 //reset button function
@@ -97,4 +89,4 @@ function resetGlobals() {
   numOfWrongGuesses = 0;
   correctLetter = 0;
   guesses = [];
-}
+};
