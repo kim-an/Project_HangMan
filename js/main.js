@@ -32,7 +32,6 @@ function setLetter(letter) {
 function checkGuess(){
   if(numOfWrongGuesses === 9){
     $('div.letterBox button').css('visibility', 'hidden');
-    // alert('You lost! Try again!');
     $('#wholeBody').addClass('do-sway');
      loseMessage();
 
@@ -95,6 +94,7 @@ function setWord() {
     $('#word').append('<div class="letter-holder"><div class="letter">' + el + '</div></div>');
   });
   $('#word').find('.letter').css('visibility','hidden');
+  $('.bodyParts').css('display', 'none');
 }
 
 //reset button function
@@ -108,7 +108,8 @@ function resetGlobals() {
 function winMessage(){
   $('#hangman').addClass('animated bounceOut');
   setTimeout (function(){
-    $('#head', '#wholeBody').css('display', 'none');
+    // $('#head', '#wholeBody').css('display', 'none');
+    $('.bodyParts').css('display', 'none');
     $('#hangman').css('background-image', 'url("./images/hangman_win-1.jpg")');
     $('#hangman').removeClass('bounceOut').addClass('bounceIn');
   }, 1000);
@@ -127,6 +128,7 @@ function loseMessage(){
 
 function removeMessage(){
   $('#hangman').css('background-image', 'url("./images/hangman_bg.png');
+  $('#wholeBody').css({'top': '190px', 'left': '77px'})
 }
 
 
