@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Hangman</title>
   <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
@@ -25,12 +25,17 @@
   <img class="bodyParts" id="eyeL" src="images/hangman_eye_L.png" alt="left eye">
   <img class="bodyParts" id="mouth" src="images/hangman_mouth.png" alt="mouth">
 </div>
+
 <div id="guess">
   <p>Letters guessed:</p>
 </div>
-<div id="word"></div>
-<div class="letterBox">
 
+<div id="word"></div>
+
+<div id="win"><img src="images/hangman_win.jpg" alt="winning message"></div>
+<div id="lose"><img src="images/hangman_lose.jpg" alt="losing message"></div>
+
+<div class="letterBox">
   <button id="A" onclick="setLetter('A');">A</button>
   <button id="B" onclick="setLetter('B');">B</button>
   <button id="C" onclick="setLetter('C');">C</button>

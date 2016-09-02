@@ -9,6 +9,7 @@ h1, p {
 
 #guess p {
   display: inline;
+  font-family: helvetica;
 }
 
 #hangman {
@@ -168,4 +169,23 @@ h1, p {
   left: 77px;
   width: 200px;
   height: 400px;
+}
+
+#win {
+  display: none;
+  margin-left: 40px;
+  overflow: hidden;
+  height: 500px;
+  width: 500px;
+  border: 10px solid black;
+
+}
+
+#lose {
+  display: none;
+  margin-left: 40px;
+  overflow: hidden;
+  height: 500px;
+  width: 500px;
+  border: 10px solid black;
 }

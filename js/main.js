@@ -32,17 +32,18 @@ function setLetter(letter) {
 function checkGuess(){
   if(numOfWrongGuesses === 9){
     $('div.letterBox button').css('visibility', 'hidden');
-    alert('You lost! Try again!');
+    // alert('You lost! Try again!');
     $('#wholeBody').addClass('do-sway');
-    // $(#word).css('visibility', 'visible');
+     loseMessage();
+
   }
 };
 
 //check for winner
 function win(){
   if (correctLetter === word.length){
-    alert('You won!');
     $('div.letterBox button').css('visibility', 'hidden');
+    winMessage();
   }
 }
 
@@ -58,6 +59,7 @@ $('#start').on('click', function(event) {
   //random word generator
   resetGlobals();
   setWord();
+  removeMessage();
 });
 
 //replay button
@@ -73,6 +75,7 @@ $('#replay').on('click', function(event) {
   setWord();
   checkGuess();
   win();
+  removeMessage();
 });
 
 
@@ -102,10 +105,29 @@ function resetGlobals() {
   guesses = [];
 };
 
+function winMessage(){
+  $('#hangman').addClass('animated bounceOut');
+  setTimeout (function(){
+    $('#head', '#wholeBody').css('display', 'none');
+    $('#hangman').css('background-image', 'url("./images/hangman_win-1.jpg")');
+    $('#hangman').removeClass('bounceOut').addClass('bounceIn');
+  }, 1000);
+}
 
+function loseMessage(){
+  $('#hangman').addClass('animated bounceOut');
+  setTimeout (function(){
+    $('#head, #eyeR, #eyeL, #mouth').css('display', 'none');
+    $('#wholeBody').css({'top':'174px', 'left':'188px'});
+    $('#hangman').css('background-image', 'url("./images/hangman_lose-2.jpg")');
+    $('#hangman').removeClass('bounceOut').addClass('bounceIn');
+  }, 1000);
 
+}
 
-
+function removeMessage(){
+  $('#hangman').css('background-image', 'url("./images/hangman_bg.png');
+}
 
 
 
